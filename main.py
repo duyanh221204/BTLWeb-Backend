@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-import pymysql
-
 from routers import authentication, post, profile, user, notification, chat, image, hashtag
 from configs.database import Base, engine
 
-app = FastAPI()
-
+import pymysql
 pymysql.install_as_MySQLdb()
+
+app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
