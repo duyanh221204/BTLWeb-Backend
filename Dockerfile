@@ -20,4 +20,4 @@ COPY . .
 EXPOSE 8000
 
 # 7. Khởi động FastAPI với Uvicorn, dùng $PORT nếu có
-CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+CMD ["sh", "-c", "PORT_VAL=${PORT#None}; uvicorn main:app --host 0.0.0.0 --port ${PORT_VAL:-8000}"]
