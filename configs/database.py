@@ -4,13 +4,9 @@ from sqlalchemy.orm import sessionmaker
 
 from utils.constants import Constant
 
-USERNAME = Constant.MYSQL_USERNAME
-PASSWORD = Constant.MYSQL_PASSWORD
-HOST = Constant.MYSQL_HOST
-PORT = Constant.MYSQL_PORT
-DATABASE = Constant.MYSQL_DATABASE
+DATABASE_URL = Constant.MYSQL_DATABASE_URL
 
-SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{USERNAME}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}"
+SQLALCHEMY_DATABASE_URL = DATABASE_URL
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
