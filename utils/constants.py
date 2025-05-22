@@ -6,11 +6,7 @@ load_dotenv()
 
 
 class Constant:
-    MYSQL_USERNAME = os.getenv("MYSQL_USERNAME")
-    MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
-    MYSQL_HOST = os.getenv("MYSQL_HOST")
-    MYSQL_PORT = os.getenv("MYSQL_PORT")
-    MYSQL_DATABASE = os.getenv("MYSQL_DATABASE")
+    MYSQL_DATABASE_URL = os.getenv("MYSQL_DATABASE_URL")
 
     SECRET_KEY = os.getenv("SECRET_KEY")
     ALGORITHM = os.getenv("ALGORITHM")
